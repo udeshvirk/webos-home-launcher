@@ -1,0 +1,78 @@
+LANDSCAPE PHOTOGRAPHS VISIBLE IN DOCUMENTATION SCREENSHOTS
+The original TV used these Wikimedia Commons photographs. Only UI screenshots
+are published here, not the standalone photo collection. Photo content retains
+its respective source license; the repository MIT license does not relicense
+these photographs or third-party app logos.
+Additional presentation changes: scaling/darkening behind UI and picker thumbnails.
+Screenshots are unedited TV captures. See source and license links below.
+
+01-Swiss-Alpine-Valley.jpg
+File:S-charl richting Alp Sesvenna. 21-09-2026. (d.j.b) 09.jpg
+Author: Dominicus Johannes Bergsma.
+Source: https://commons.wikimedia.org/wiki/File:S-charl_richting_Alp_Sesvenna._21-09-2026._(d.j.b)_09.jpg
+License: CC BY-SA 4.0 https://creativecommons.org/licenses/by-sa/4.0
+Changes: Wikimedia 1920px thumbnail; locally recompressed JPEG quality 78; 320px picker thumbnail. No artistic changes.
+
+02-Hadrians-Wall-Moorland.jpg
+File:Hadrian's Wall on Housesteads Crags - 06.jpg
+Author: Benjamin Smith
+Source: https://commons.wikimedia.org/wiki/File:Hadrian%27s_Wall_on_Housesteads_Crags_-_06.jpg
+License: CC BY-SA 4.0 https://creativecommons.org/licenses/by-sa/4.0
+Changes: Wikimedia 1920px thumbnail; locally recompressed JPEG quality 78; 320px picker thumbnail. No artistic changes.
+
+03-Tarasp-Lake.jpg
+File:Tarasp (Taraspsee) gemeente Scuol, 18-09-2023. (actm.) 15.jpg
+Author: Agnes Monkelbaan
+Source: https://commons.wikimedia.org/wiki/File:Tarasp_(Taraspsee)_gemeente_Scuol,_18-09-2023._(actm.)_15.jpg
+License: CC BY-SA 4.0 https://creativecommons.org/licenses/by-sa/4.0
+Changes: Wikimedia 1920px thumbnail; locally recompressed JPEG quality 78; 320px picker thumbnail. No artistic changes.
+
+04-Pyrenees-Valley.jpg
+File:2019 - Parc national des Pyrenees - Vallée de Gavarnie.jpg
+Author: Moahim
+Source: https://commons.wikimedia.org/wiki/File:2019_-_Parc_national_des_Pyrenees_-_Vall%C3%A9e_de_Gavarnie.jpg
+License: CC BY-SA 4.0 https://creativecommons.org/licenses/by-sa/4.0
+Changes: Wikimedia 1920px thumbnail; locally recompressed JPEG quality 78; 320px picker thumbnail. No artistic changes.
+
+05-Yorkshire-Rainbow.jpg
+File:2013 Rainbow over Washfold.jpg
+Author: Kreuzschnabel
+Source: https://commons.wikimedia.org/wiki/File:2013_Rainbow_over_Washfold.jpg
+License: CC BY-SA 3.0 https://creativecommons.org/licenses/by-sa/3.0
+Changes: Wikimedia 1920px thumbnail; locally recompressed JPEG quality 78; 320px picker thumbnail. No artistic changes.
+
+06-Laos-Rice-Fields.jpg
+File:Wooden hut fence mountains and blue sky in the green rice fields of Vang Vieng in Laos.jpg
+Author: Basile Morin
+Source: https://commons.wikimedia.org/wiki/File:Wooden_hut_fence_mountains_and_blue_sky_in_the_green_rice_fields_of_Vang_Vieng_in_Laos.jpg
+License: CC BY-SA 4.0 https://creativecommons.org/licenses/by-sa/4.0
+Changes: Wikimedia 1920px thumbnail; locally recompressed JPEG quality 78; 320px picker thumbnail. No artistic changes.
+
+07-Laos-Sunset-Reflections.jpg
+File:Colorful sky with pink and blue clouds reflecting in the water of a paddy field at dusk in Don Det Laos.jpg
+Author: Basile Morin
+Source: https://commons.wikimedia.org/wiki/File:Colorful_sky_with_pink_and_blue_clouds_reflecting_in_the_water_of_a_paddy_field_at_dusk_in_Don_Det_Laos.jpg
+License: CC BY-SA 4.0 https://creativecommons.org/licenses/by-sa/4.0
+Changes: Wikimedia 1920px thumbnail; locally recompressed JPEG quality 78; 320px picker thumbnail. No artistic changes.
+
+08-Jeju-Blue-Hour.jpg
+File:Hydrangea macrophylla in front of Seongsan Ilchulbong volcano at blue hour in Jeju Island South Korea.jpg
+Author: Basile Morin
+Source: https://commons.wikimedia.org/wiki/File:Hydrangea_macrophylla_in_front_of_Seongsan_Ilchulbong_volcano_at_blue_hour_in_Jeju_Island_South_Korea.jpg
+License: CC BY-SA 4.0 https://creativecommons.org/licenses/by-sa/4.0
+Changes: Wikimedia 1920px thumbnail; locally recompressed JPEG quality 78; 320px picker thumbnail. No artistic changes.
+
+09-Gyeongju-Sunset.jpg
+File:Sunset over the Tumuli Park in Gyeongju Historic Site Wolseong District South Korea.jpg
+Author: Basile Morin
+Source: https://commons.wikimedia.org/wiki/File:Sunset_over_the_Tumuli_Park_in_Gyeongju_Historic_Site_Wolseong_District_South_Korea.jpg
+License: CC BY-SA 4.0 https://creativecommons.org/licenses/by-sa/4.0
+Changes: Wikimedia 1920px thumbnail; locally recompressed JPEG quality 78; 320px picker thumbnail. No artistic changes.
+
+10-Brazil-Sand-Dunes.jpg
+File:Casal de turistas caminha em uma duna, enquanto o dia morre nos Lençóis Maranhenses (edited).jpg
+Author: Original:  Julio Cesar Goncalves Corrêa
+Derivative work:  Aristeas
+Source: https://commons.wikimedia.org/wiki/File:Casal_de_turistas_caminha_em_uma_duna,_enquanto_o_dia_morre_nos_Len%C3%A7%C3%B3is_Maranhenses_(edited).jpg
+License: CC BY-SA 4.0 https://creativecommons.org/licenses/by-sa/4.0
+Changes: Wikimedia 1920px thumbnail; locally recompressed JPEG quality 78; 320px picker thumbnail. No artistic changes.
