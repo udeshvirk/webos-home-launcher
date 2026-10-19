@@ -3,7 +3,7 @@ private/
 backup/
 backups/
 photos/
-screenshots/
+/screenshots/
 dist/
 node_modules/
 .env

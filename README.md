@@ -2,6 +2,10 @@
 
 A practical guide and copyable AI prompt for giving an older **LG webOS TV** a lightweight home screen: app tiles, a fixed favourites dock, local wallpapers and a photo slideshow.
 
+![The original TV's home screen with a landscape wallpaper, fixed favourites dock and app grid](docs/screenshots/home.png)
+
+**[View the screenshot gallery: Home, wallpaper picker and Inputs](docs/screenshots/README.md).** These are real captures of the original configured TV, whose title and weather label differ from the generic reference app. Photograph credits are included in the gallery.
+
 Start with **[PROMPT.md](PROMPT.md)** if you want an assistant to walk you through it. Follow **[SETUP.md](docs/SETUP.md)** if you prefer the manual route.
 
 This is a documented recipe with reference code, **not a universal rooting tool or a one-click installer**. Firmware compatibility and private Luna APIs vary by TV. The generic source was adapted from a real-device setup; its generalized package has not been installed across other TVs.
@@ -100,7 +104,7 @@ Do not use `--replace` until you understand it: it backs up the current photo se
 
 Google Photos sync is not implemented. No Google account, album sharing or scraping is required.
 
-Never commit `private/`, SSH keys, real settings dumps, photos, screenshots or generated app inventories. `.gitignore` covers the expected local paths; review staged files before pushing anyway.
+Never commit `private/`, SSH keys, real settings dumps, personal photos, unreviewed screenshots or generated app inventories. `.gitignore` covers the expected local paths; review staged files before pushing anyway. Only the explicitly reviewed UI captures under `docs/screenshots/` are included here.
 
 ## What this project intentionally does not automate
 

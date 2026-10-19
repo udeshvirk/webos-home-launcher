@@ -19,7 +19,7 @@ Links were checked while preparing this guide. Upstream instructions and firmwar
 
 ## Assets and weather attribution
 
-The repository contains no family photos, screenshots, landscape-photo collection or copied Netflix/Prime/YouTube/Hotstar/Apple TV icons. Their names and app IDs appear only for interoperability. Icons are copied from each user's own TV into an ignored local build directory, not redistributed in this repository.
+The repository contains reviewed UI screenshots in [the gallery](screenshots/README.md), with [photograph attribution](screenshots/ATTRIBUTION.txt). No family photos, account/profile screens or standalone landscape-photo collection are included. Third-party app logos visible in UI captures remain their owners' marks; no separate streaming-app icon assets are bundled. The local build helper copies icons from each user's own TV into an ignored directory.
 
 Use your own photos, or obtain appropriate permission and retain each asset's attribution/license locally. Do not assume Wikimedia Commons is one blanket license for all images.
 
