@@ -1,0 +1,10 @@
+#!/bin/sh
+# Use a root SSH alias in ~/.ssh/config. Never commit its private key.
+set -eu
+ALIAS=${TV_SSH_ALIAS:-tv-root}
+case "$ALIAS" in ''|-*|*[!a-zA-Z0-9._@:-]*) echo 'Invalid TV_SSH_ALIAS' >&2; exit 1;; esac
+if [ "${1:-}" = '--tty' ]; then
+ shift
+ exec ssh -o BatchMode=yes -tt "$ALIAS" "$@"
+fi
+exec ssh -o BatchMode=yes -T "$ALIAS" "$@"

@@ -1,0 +1,26 @@
+# Sources and credit
+
+The exploit authors and Homebrew maintainers did the underlying platform work. This repository documents an end-user customization and publishes only its own sanitized launcher/helpers, not LG system files or vendored exploit code.
+
+- [CanI.RootMy.TV](https://cani.rootmy.tv/): exact firmware compatibility check.
+- [faultmanager-autoroot](https://github.com/throwaway96/faultmanager-autoroot): authoritative applicability, instructions, removal timing and upstream script. Licensed by its authors; not bundled here.
+- [dejavuln-autoroot](https://github.com/throwaway96/dejavuln-autoroot): authoritative applicability and USB release procedure. Licensed by its authors; not bundled here.
+- [webOS Homebrew Channel](https://github.com/webosbrew/webos-homebrew-channel): root tooling, installer and startup infrastructure. Not bundled here.
+- [webOS Homebrew Luna service bus guide](https://www.webosbrew.org/pages/luna-service-bus.html): service inspection and root/private API context.
+- [webOS Homebrew appinfo notes](https://www.webosbrew.org/pages/appinfojson): undocumented overlay metadata and caveats.
+- [webOS Homebrew web-app guide](https://www.webosbrew.org/develop/guides/web-app/): external-input embedding; hardware-dependent limitations.
+- [LG App Lifecycle Management](https://webostv.developer.lge.com/develop/guides/app-lifecycle-management): foreground, background and relaunch behavior.
+- [LG appinfo reference](https://webostv.developer.lge.com/develop/references/appinfo-json): application metadata.
+- [webOS CLI](https://github.com/webos-tools/cli): packaging tools; consult its current installation instructions.
+- [Glasshouse implementation notes](https://github.com/rorygallagher2024/glasshouse/blob/main/docs/IMPLEMENTATION.md#remote-keys-through-the-compositors-filter-chain): native compositor filter-chain mechanism. We used the documented mechanism and inspected the real TV's own files; Glasshouse server code is not bundled.
+- [Open-Meteo forecast API](https://open-meteo.com/en/docs): optional weather. Attribution is required if you enable it; see below.
+
+Links were checked while preparing this guide. Upstream instructions and firmware patch status can change. Consult them again at setup time; the working model/firmware example is a historical observation, not an eligibility database.
+
+## Assets and weather attribution
+
+The repository contains no family photos, screenshots, landscape-photo collection or copied Netflix/Prime/YouTube/Hotstar/Apple TV icons. Their names and app IDs appear only for interoperability. Icons are copied from each user's own TV into an ignored local build directory, not redistributed in this repository.
+
+Use your own photos, or obtain appropriate permission and retain each asset's attribution/license locally. Do not assume Wikimedia Commons is one blanket license for all images.
+
+The supplied small launcher icon was created for this project. When enabling weather, retain the visible Open-Meteo attribution provided by the reference app and review the service's current terms and [CC BY 4.0 data attribution](https://open-meteo.com/en/terms).

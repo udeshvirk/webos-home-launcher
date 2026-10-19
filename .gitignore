@@ -1,0 +1,20 @@
+# Never publish a real TV's state, access credentials, media or build output.
+private/
+backup/
+backups/
+photos/
+screenshots/
+dist/
+node_modules/
+.env
+*.pem
+*.key
+*.pub
+*ed25519*
+known_hosts
+*.ipk
+*.tgz
+*.zip
+app/config.local.js
+.DS_Store
+__pycache__/

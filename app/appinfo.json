@@ -1,0 +1,15 @@
+{
+  "id": "org.local.weboshome",
+  "version": "0.1.0",
+  "vendor": "Community",
+  "type": "web",
+  "main": "index.html",
+  "title": "webOS Home",
+  "icon": "assets/icon.png",
+  "largeIcon": "assets/icon.png",
+  "resolution": "1920x1080",
+  "bgColor": "#10151b",
+  "disableBackHistoryAPI": true,
+  "requiredACG": [],
+  "defaultWindowType": "overlay"
+}
