@@ -2,6 +2,8 @@
 
 A practical guide and copyable AI prompt for giving an older **LG webOS TV** a lightweight home screen: a spacious four-app dock, image-only landscape cards, local wallpapers and a photo slideshow.
 
+For Sony BRAVIA Android TVs, see our **[Sony BRAVIA Launcher](https://github.com/udeshvirk/sony-bravia-launcher)**—the companion project that inspired this launcher’s classic layout.
+
 ![Classic home screen on the original LG TV with aligned clock, icon pills and a four-app banner dock](docs/screenshots/home.png)
 
 **[View the screenshot gallery: Home, wallpaper picker and Inputs](docs/screenshots/README.md).** These are real captures of the original configured TV, whose title and weather label differ from the generic reference app. Photograph credits are included in the gallery.
