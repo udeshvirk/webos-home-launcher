@@ -1,6 +1,6 @@
 {
   "id": "org.local.weboshome",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "vendor": "Community",
   "type": "web",
   "main": "index.html",
@@ -10,6 +10,5 @@
   "resolution": "1920x1080",
   "bgColor": "#10151b",
   "disableBackHistoryAPI": true,
-  "requiredACG": [],
-  "defaultWindowType": "overlay"
+  "requiredACG": []
 }

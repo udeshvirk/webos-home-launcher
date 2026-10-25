@@ -15,7 +15,7 @@ Already rooted: [yes/no/unsure]
 Computer OS: [macOS/Linux/Windows]
 TV root SSH alias/IP: [local value; don't publish it]
 Launcher title: [name]
-Dock apps, in order: [4–5 apps]
+Dock apps, in order: [up to 4 apps]
 Weather: [no, or yes plus city / coordinates / Celsius or Fahrenheit]
 Slideshow idle time: [minutes]
 Wallpaper folder on my computer: [local path or none]
@@ -65,9 +65,12 @@ Ground rules:
 4. Build and install a small plain HTML/CSS/ES5 launcher.
    Use a cached app list and local icon copies, refresh in the background, and
    keep the favourites dock separate from the scrollable All Apps grid.
-   Include clock/date, Inputs, Settings, stock LG Home and a slideshow button.
-   Deterministic D-pad rows, last app focus, one moving highlight. No blur,
-   shadows, runtime web fonts, video wallpaper or always-running polling service.
+   Use a spacious four-app dock and matching image-only landscape cards. Down
+   reveals All Apps; Up returns Home. Include greeting/clock/date, Inputs and
+   Settings icon pills; Back opens stock Home. Slideshow preview is in the picker.
+   Deterministic D-pad rows, last app focus, one moving highlight. Use bundled
+   static font weights, with no live blur, blurred text shadows, remote fonts,
+   video wallpaper or always-running polling service.
    Use root-backed applicationManager only where needed. Review the privilege
    boundary: the reference app uses Homebrew Channel's root exec service.
    Install through the supported Homebrew/root path; never reinstall Developer
@@ -100,7 +103,8 @@ Ground rules:
    Home reachable. Add a short-lived Homebrew startup hook with bounded retries.
    Compare app PIDs through stock Home and custom Home. A normal full-screen
    launcher caused Hotstar to exit in the original test; an overlay preserved
-   it. Treat overlay as an explicit trial, not a universal fix. Check D-pad
+   it, but later dismissed Home after about two idle minutes. Use normal card
+   mode by default. Treat overlay as an explicit trial, not a universal fix. Check D-pad
    focus, tile launches, colour launches, Settings, stock Home, audio behind Home,
    slideshow behavior and fallback. Dismiss our overlay on app launch. Do not
    force every streaming app into memory or change global memory policy blindly.

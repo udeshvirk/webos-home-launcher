@@ -38,6 +38,14 @@ After a package update, copy the photo resources back before checking images. Va
 
 The dock originally shared the scroll container with All Apps. Focusing the last app scrolled the dock partly off-screen. It now sits in a separate fixed section, and focus scrolling applies only to the other-app rows. Verify the entire rectangle of every dock tile is within the visible region while the last app is selected.
 
+## Home disappears after about two idle minutes
+
+The original TV later dismissed the overlay after approximately 120 seconds without remote input. A successful launch reply did not prove the overlay remained visible. The owner returned to normal card mode; Home then stayed visible and the five-minute slideshow worked. Do not modify the compositor idle settings to solve this by default. Card mode can reload streaming apps, as observed earlier.
+
+## Text looks soft or card labels overlap icons
+
+The classic layout uses static Outfit TrueType instances at weights 140, 300 and 400, avoiding a variable-font CSS declaration on the older browser. Clock, title and first app share the same left edge. Text shadows are omitted. App cards contain artwork only; the selected name appears above the rows. Keep native icon proportions, and use wide local artwork rather than stretching a small square icon to fill a banner.
+
 ## All empty HDMI ports say Connected
 
 Do not label ports from `eim/getAllInputStatus`'s `connected` field alone. On the tested unit it returned true on all three unplugged HDMI ports while `hdmiPlugIn` was false.

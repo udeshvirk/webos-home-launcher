@@ -1,10 +1,57 @@
-*{box-sizing:border-box}html,body{margin:0;width:1920px;height:1080px;overflow:hidden;background:#10151b;color:#f5f6f7;font-family:Arial,Helvetica,sans-serif}button{font:inherit;color:inherit;border:0;outline:0;background:#202a35;cursor:pointer}#wallpaper,#shade{position:absolute;left:0;top:0;right:0;bottom:0;width:1920px;height:1080px}#wallpaper{background-size:cover;background-position:center}#shade{background:linear-gradient(180deg,rgba(9,15,22,.38),rgba(9,15,22,.18) 35%,rgba(9,15,22,.94) 80%)}header{position:absolute;left:110px;top:95px}#clock{font-size:126px;line-height:1;font-weight:400;letter-spacing:-5px}#date{font-size:29px;margin-top:18px;color:#e0e5ea}#weather{font-size:24px;margin-top:20px;color:#c8d8e3;min-height:30px}#brand{position:absolute;right:110px;top:113px;font-size:18px;letter-spacing:5px;color:#d2dce4}#brand span{color:#8be2cf}#actions{position:absolute;top:255px;right:110px;display:flex}#actions button{padding:19px 28px;margin-left:18px;border-radius:9px;font-size:23px;background:rgba(21,32,43,.9)}#scroll{position:absolute;left:110px;right:110px;top:550px;bottom:85px;overflow:hidden;padding:10px 8px 20px}.label{font-size:17px;letter-spacing:4px;color:#c0ced8;margin:0 0 18px 4px}.secondary{margin-top:29px}.row{display:flex}#dock .tile{width:318px;margin-right:22px;height:163px}#dock .tile:last-child{margin-right:0}#apps{display:flex;flex-wrap:wrap}.tile{display:flex;align-items:center;text-align:left;background:rgba(28,40,53,.95);border-radius:12px;padding:24px;position:relative}#apps .tile{width:260px;height:132px;margin:0 20px 20px 0;padding:20px;font-size:21px}#apps .tile:nth-child(6n){margin-right:0}.tile img{width:80px;height:80px;object-fit:contain;margin-right:22px;flex-shrink:0;border-radius:10px}#apps .tile img{width:57px;height:57px;margin-right:15px}.tile .name{font-size:25px;line-height:1.2}#apps .name{font-size:21px}.tile .initial{font-size:42px;width:80px;text-align:center;margin-right:15px}.tile.selected{background:#324b5e}#focus{position:absolute;border:3px solid #9cf5df;border-radius:12px;pointer-events:none;z-index:10;transition:transform 100ms ease,opacity 100ms;opacity:0;left:0;top:0}#hint{position:absolute;bottom:28px;left:118px;color:#a8b9c8;font-size:18px}#modal{position:absolute;left:0;top:0;right:0;bottom:0;background:rgba(5,10,15,.85);z-index:20;display:flex;align-items:center;justify-content:center}#panel{width:1300px;max-height:900px;background:#15212d;padding:45px;border-radius:16px;overflow:hidden}h1{font-size:35px;font-weight:400;margin:0 0 25px}#modal-items{display:flex;flex-wrap:wrap;max-height:680px;overflow:hidden}#modal-items button{border:3px solid transparent;width:375px;padding:21px;margin:0 18px 18px 0;border-radius:10px;font-size:23px;text-align:left}#modal-items button.selected{border-color:#9cf5df;background:#324b5e}#modal-items img{width:325px;height:160px;object-fit:cover;display:block;margin-bottom:12px}#modal-hint{font-size:18px;color:#a8b9c8}#saver{position:absolute;left:0;top:0;right:0;bottom:0;background:#080d12;z-index:30}#saver img{position:absolute;width:1920px;height:1080px;object-fit:contain;opacity:0;transition:opacity 2500ms linear}#saver-clock{position:absolute;bottom:60px;right:85px;font-size:40px;color:#fff}#toast{position:absolute;bottom:95px;left:500px;width:920px;text-align:center;padding:20px;background:#203b49;font-size:24px;z-index:40;border-radius:12px}.hidden{display:none!important}
+/* 1920x1080 layout. Clock, title and first card share x=218.
+   Dock: x=164, width=1592, 54px inset, four 338px cards, three 44px gaps. */
+@font-face{font-family:Outfit;src:url('assets/fonts/Outfit-Light.ttf') format('truetype');font-weight:300;font-style:normal}
+@font-face{font-family:Outfit;src:url('assets/fonts/Outfit-Regular.ttf') format('truetype');font-weight:400;font-style:normal}
+@font-face{font-family:OutfitClock;src:url('assets/fonts/Outfit-Clock.ttf') format('truetype');font-weight:400;font-style:normal}
+*{box-sizing:border-box}
+html,body{margin:0;width:1920px;height:1080px;overflow:hidden;background:#10151b;color:#f5f6f7;font-family:Outfit,Arial,sans-serif;font-weight:400}
+button{font:inherit;color:inherit;border:0;outline:0;cursor:pointer;background:transparent}
+#wallpaper,#shade{position:absolute;left:0;top:0;width:1920px;height:1080px}
+#wallpaper{background-size:cover;background-position:center}
+#shade{background:linear-gradient(90deg,rgba(0,0,0,.3),transparent 65%),linear-gradient(180deg,rgba(0,0,0,.5),rgba(0,0,0,.15) 40%,rgba(0,0,0,.5) 72%,rgba(0,0,0,.85))}
+header{position:absolute;left:218px;top:68px;text-shadow:none;font-weight:300}
+#greeting{font-size:40px;line-height:48px;color:#c5c6c9}
+#clock{font-family:OutfitClock,Arial,sans-serif;font-size:184px;line-height:224px;letter-spacing:-4px;font-weight:400;margin-top:8px;color:#fff}
+#date{font-size:40px;line-height:48px;margin-top:2px;color:#c5c6c9}
+#weather{font-size:34px;line-height:42px;margin-top:24px;min-height:42px;color:#e5e6e8;font-weight:400}
+#actions{position:absolute;top:72px;right:164px;display:flex}
+#actions button{height:80px;padding:0 32px;margin-left:24px;border:1px solid rgba(255,255,255,.18);border-radius:40px;background:rgba(255,255,255,.14);font-size:30px;display:flex;align-items:center;justify-content:center}
+#actions button.selected{background-color:rgba(255,255,255,.24)}
+#actions svg{margin-right:16px;width:36px;height:36px;flex-shrink:0}
+#selection{position:absolute;left:218px;top:607px;font-size:92px;line-height:112px;font-weight:300;letter-spacing:-1px;text-shadow:none;white-space:nowrap;max-width:1484px;overflow:hidden;text-overflow:ellipsis}
+#favourites{position:absolute;left:164px;right:164px;top:739px;height:285px;padding:46px 53px;border:1px solid rgba(255,255,255,.12);border-radius:55px;background:rgba(255,255,255,.09)}
+.row{display:flex;justify-content:flex-start}
+.tile{position:relative;display:flex;align-items:center;justify-content:center;flex-shrink:0;border-radius:22px;background-color:#24242a;background-position:center;background-size:104px 104px;background-repeat:no-repeat}
+.tile img,.tile .name{display:none}
+#dock .tile,#apps .tile{width:338px;height:191px;padding:0;margin-right:44px}
+#dock .tile:last-child{margin-right:0}
+#dock .tile.banner,#apps .tile.banner{background-size:100% 100%;background-color:transparent}
+#dock .tile.selected,#apps .tile.selected{transform:scale(1.10)}
+#dock .missing-icon .name{display:block;font-size:27px;text-align:center;padding:20px}
+#all-label{position:absolute;left:218px;top:445px;font-size:16px;line-height:20px;letter-spacing:3px;color:#b8bbc3;visibility:hidden}
+#scroll{position:absolute;left:164px;right:164px;top:480px;bottom:28px;overflow:hidden;padding:16px 54px 24px;visibility:hidden}
+#apps{display:flex;flex-wrap:wrap}
+#apps .tile{margin-bottom:38px}
+#apps .tile:nth-child(4n){margin-right:0}
+#browse-hint{position:absolute;left:0;right:0;bottom:16px;text-align:center;font-size:18px;color:#b8bbc3}
+#focus{position:absolute;left:0;top:0;border:3px solid rgba(255,255,255,.65);border-radius:26px;pointer-events:none;z-index:10;transition:transform 120ms ease,opacity 120ms;opacity:0;box-shadow:0 0 0 8px rgba(255,255,255,.24)}
+.apps-open header{display:none}
+.apps-open #actions{top:-120px}
+.apps-open #selection{top:22px;font-size:56px;line-height:72px}
+.apps-open #favourites{top:120px}
+.apps-open #all-label,.apps-open #scroll{visibility:visible}
+.apps-open #browse-hint{display:none}
+#modal{position:absolute;left:0;top:0;right:0;bottom:0;background:rgba(5,10,15,.85);z-index:20;display:flex;align-items:center;justify-content:center}#panel{width:1300px;max-height:900px;background:#15212d;padding:45px;border-radius:16px;overflow:hidden}h1{font-size:35px;font-weight:400;margin:0 0 25px}#modal-items{display:flex;flex-wrap:wrap;max-height:680px;overflow:hidden}#modal-items button{border:3px solid transparent;width:375px;padding:21px;margin:0 18px 18px 0;border-radius:10px;font-size:23px;text-align:left}#modal-items button.selected{border-color:#9cf5df;background:#324b5e}#modal-items img{width:325px;height:160px;object-fit:cover;display:block;margin-bottom:12px}#modal-hint{font-size:18px;color:#a8b9c8}#saver{position:absolute;left:0;top:0;right:0;bottom:0;background:#080d12;z-index:30}#saver img{position:absolute;width:1920px;height:1080px;object-fit:contain;opacity:0;transition:opacity 2500ms linear}#saver-clock{position:absolute;bottom:60px;right:85px;font-size:40px;color:#fff}#toast{position:absolute;bottom:95px;left:500px;width:920px;text-align:center;padding:20px;background:#203b49;font-size:24px;z-index:40;border-radius:12px}.hidden{display:none!important}
 
 #modal-items{position:relative}
 
 .inputs-open #panel{width:1450px}.inputs-open #modal-items button{width:430px;padding:18px}.input-preview{width:388px;height:218px;background:#0b121a;position:relative;margin-bottom:14px;display:flex;align-items:center;justify-content:center;overflow:hidden}.input-preview span{font-size:19px;color:#afc4d3;text-align:center;padding:12px}.input-preview video{position:absolute;left:0;top:0;width:388px;height:218px;object-fit:contain;background:transparent;pointer-events:none}.input-label{display:block;font-size:24px}.input-status{display:block;color:#afc4d3;margin-top:9px;font-size:18px}
 
-/* Fixed favourites; only the remaining apps scroll. */
-#favourites{position:absolute;left:118px;right:118px;top:430px}#all-label{position:absolute;left:122px;top:655px}#scroll{top:690px;padding:10px 8px 0}#apps .tile{height:124px;margin-bottom:16px}.choice-state{display:block;font-size:18px;color:#9cf5df;margin-top:10px}.input-preview span{position:relative;z-index:2;pointer-events:none}.input-preview video{z-index:1}#actions button{padding:19px 24px}
 
-#weather-credit{display:block;margin-top:10px;font-size:16px;color:#b8c9d5}#weather-credit a{color:inherit}
+/* Match dialogs to the quieter home palette. */
+#panel{background:#1b1e25;border:1px solid rgba(255,255,255,.14);border-radius:26px}#modal-items{position:relative}#modal-items button{background:#292d36;border-radius:14px}#modal-items button.selected{border-color:#fff;background:#414650}#modal-hint{color:#b8bbc3}.choice-state{display:block;font-size:18px;color:#e0e3e9;margin-top:10px}.input-preview span{position:relative;z-index:2;pointer-events:none}.input-preview video{z-index:1}
+
+#dock .missing-icon .name{display:block;font-size:27px;text-align:center;padding:20px}
+
+
+#weather-credit{display:block;font-size:16px;margin-top:10px;color:#b8bbc3}#weather-credit a{color:inherit}

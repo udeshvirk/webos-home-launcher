@@ -66,11 +66,11 @@ python3 scripts/prepare-apps.py
 sh scripts/build.sh
 ```
 
-Discover IDs from your TV instead of assuming every region has the example apps. The reference dock has five entries; replacing IDs keeps the layout intact. `prepare-apps.py` caches launch points and icon copies privately, excluding deep-link params. It does not publish streaming-app icons. Generated assets enter only your ignored local build.
+Discover IDs from your TV instead of assuming every region has the example apps. The reference dock has four entries; replacing IDs keeps the layout intact. `prepare-apps.py` caches launch points and icon copies privately, excluding deep-link params. It does not publish streaming-app icons. Generated assets enter only your ignored local build.
 
-The package is `dist/org.local.weboshome_0.1.0_all.ipk` initially. Keep your versioned source and IPK locally for rollback. Increase the app version on updates; an older package may not be accepted as a downgrade.
+The package is `dist/org.local.weboshome_0.2.0_all.ipk` initially. Keep your versioned source and IPK locally for rollback. Increase the app version on updates; an older package may not be accepted as a downgrade.
 
-The default reference manifest uses **overlay** mode because it preserved Hotstar in our test. It remains experimental. To compare normal card behavior, change `defaultWindowType` to `card`, increase the version and rebuild. Do not infer app retention from appearance: compare PIDs.
+The default manifest uses normal **card** mode. The original TV's overlay trial preserved Hotstar's process, but later dismissed Home after roughly two idle minutes; normal card mode stayed visible and reached the five-minute slideshow. Card mode may reload streaming apps. Treat an overlay as a separate, explicit experiment on your firmware; compare PIDs and actual screen visibility.
 
 ## 6. Install through Homebrew's root path
 
@@ -128,13 +128,13 @@ sh scripts/capture.sh baseline
 
 On a new setup HOME still opens LG Home until you explicitly configure the default. Launch the custom app manually through `applicationManager/launch`, then test:
 
-- All dock/grid tiles, remote focus and lower rows without dock clipping.
+- Four dock tiles, Down into the four-column grid, lower-row scrolling, Up back to Home and remote focus.
 - Settings short press; long OK opens the picker but cannot select while held.
-- Current wallpaper marker, daily rotation and manual slideshow.
+- Current wallpaper marker, daily rotation and slideshow preview from the picker.
 - Each actual streaming app, preserving the owner's profile/login.
 - Inputs: saved names, empty fallback, preview release and real connected video if available.
 - No photo/weather timers doing work when Home is hidden.
-- Overlay focus, successful tile launch/dismissal and programme audio behind Home.
+- Home remains visible beyond two idle minutes and the slideshow starts after five minutes; check app return/reload behavior.
 
 Take screenshots after the UI has painted. Launch acknowledgement is not launch time to usable UI.
 

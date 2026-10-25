@@ -73,6 +73,40 @@ else:
         data = (scripts.parent/'private/screenshots/offline.png').read_bytes()
         self.assertTrue(data.startswith(b'\x89PNG\r\n\x1a\n'))
 
+    def test_prepare_apps_keeps_inventory_and_banners_private(self):
+        scripts = self.folder/'prepared/scripts'
+        scripts.mkdir(parents=True)
+        shutil.copy2(ROOT/'scripts/prepare-apps.py', scripts/'prepare-apps.py')
+        fake = scripts/'tv-ssh'
+        fake.write_text("""#!/usr/bin/env python3
+import json,sys
+command=sys.argv[-1]
+if 'listLaunchPoints' in command:
+    pass
+elif command=='cat /tmp/webos-home-launchpoints.json':
+    print(json.dumps({'returnValue':True,'launchPoints':[
+        {'id':'test.app','title':'Test app','icon':'/tmp/icon.png','params':{'token':'private-fixture'}},
+        {'id':'test.app','title':'Duplicate'},
+        {'id':'invalid/id','title':'Invalid'}]}))
+elif command=='cat -- /tmp/icon.png':
+    sys.stdout.buffer.write(b'\\x89PNG\\r\\n\\x1a\\nfixture')
+else:
+    raise SystemExit(command)
+""")
+        fake.chmod(0o755)
+        result = subprocess.run(['python3',str(scripts/'prepare-apps.py')], capture_output=True,text=True)
+        self.assertEqual(result.returncode,0,result.stderr)
+        generated = scripts.parent/'private/generated'
+        seed = (generated/'seed.js').read_text()
+        apps = json.loads(seed[len('window.SEED_APPS='):-2])
+        self.assertEqual(len(apps),1)
+        self.assertEqual(apps[0]['params'],{})
+        self.assertNotIn('private-fixture',seed)
+        banner = (generated/apps[0]['packagedBanner']).read_text()
+        self.assertIn('viewBox="0 0 338 191"',banner)
+        self.assertIn('data:image/png;base64,',banner)
+        self.assertNotIn('<text',banner)
+
     def test_invalid_alias_never_calls_ssh(self):
         self.env['TV_SSH_ALIAS'] = '-oProxyCommand=anything'
         r = self.run_helper('key.sh', 'OK')

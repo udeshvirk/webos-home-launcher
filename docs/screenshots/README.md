@@ -2,9 +2,11 @@
 
 Real, unedited 1920×1080 captures from the original LG 55UM7300PTA setup. They show its configured title, weather location and saved input names; the public reference source uses generic defaults. These captures illustrate the UI improvements before the subsequent overlay trial, not a separately installed build of the generic reference app.
 
-## Home screen
+## Earlier Home screen
 
-Fixed favourites remain visible while the last app in All Apps is selected. Clock/date, optional weather, Inputs, Settings, stock Home and the immediate slideshow button are visible.
+This capture predates the classic four-app redesign. The current source uses a spacious dock, icon pills and a separate All Apps view; it does not show the older stock-Home/slideshow pills.
+
+In this earlier design, fixed favourites remain visible while the last app in All Apps is selected. Clock/date, optional weather, Inputs, Settings, stock Home and the immediate slideshow button are visible.
 
 ![Home screen with fixed favourites and the lower app grid](home.png)
 

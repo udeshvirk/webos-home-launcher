@@ -1,8 +1,10 @@
 # webOS Home Launcher
 
-A practical guide and copyable AI prompt for giving an older **LG webOS TV** a lightweight home screen: app tiles, a fixed favourites dock, local wallpapers and a photo slideshow.
+A practical guide and copyable AI prompt for giving an older **LG webOS TV** a lightweight home screen: a spacious four-app dock, image-only landscape cards, local wallpapers and a photo slideshow.
 
-![The original TV's home screen with a landscape wallpaper, fixed favourites dock and app grid](docs/screenshots/home.png)
+![Earlier home screen on the original TV](docs/screenshots/home.png)
+
+*Earlier real-TV capture; the current source uses the classic four-app design described below.*
 
 **[View the screenshot gallery: Home, wallpaper picker and Inputs](docs/screenshots/README.md).** These are real captures of the original configured TV, whose title and weather label differ from the generic reference app. Photograph credits are included in the gallery.
 
@@ -12,14 +14,18 @@ This is a documented recipe with reference code, **not a universal rooting tool 
 
 ## What you get
 
-- Plain HTML/CSS/ES5 JavaScript; no framework, blur, video background or web fonts.
-- Clock/date, app tiles, a fixed five-app dock and D-pad navigation.
+- Plain HTML/CSS/ES5 JavaScript; no framework, live blur, video background or remotely loaded fonts.
+- Sony-inspired clock/date typography, a four-app dock and matching landscape cards.
+- Down reveals All Apps; Up returns to the spacious home view.
+- Inputs and Settings pills with icons; Back keeps stock LG Home accessible.
+- Locally bundled static Outfit font weights for the older browser.
+- Hold OK on an app to reorder, hide or change favourites.
 - Cached launch points and locally copied app icons for a fast first render.
 - Local wallpapers, daily rotation and a picker that marks the current image.
-- A photo slideshow, started manually or after five idle minutes by default.
+- A shuffled photo slideshow, started from the wallpaper picker or after five idle minutes by default.
 - Input labels with honest empty-preview placeholders; optional single HDMI preview.
 - Optional Open-Meteo weather, disabled until you supply a location.
-- An overlay mode that preserved Hotstar across a Home round trip in our test.
+- Normal card mode by default; the earlier overlay trial preserved Hotstar but later dismissed Home after about two idle minutes on the original TV.
 - Recipes for root SSH, screenshot capture, injected remote keys, backups, Home mapping and undo.
 
 ## Read these first
@@ -44,12 +50,14 @@ Root eligibility is a moving target. The [faultmanager README](https://github.co
 | Access | Root SSH; Developer Mode removed after rooting |
 | Screenshots | `tv.capture/executeOneShot`, PNG, DISPLAY mode |
 | Home button | `general.defaultApps.home` supported on that firmware |
-| Stock Home | Kept accessible through a launcher button |
+| Stock Home | Kept accessible with Back |
 | Overlay trial | Hotstar kept the same process through Home → Hotstar via tile and green shortcut |
 | Hotstar menu lag | Still noticeable; no claim that this launcher fixes the app's rendering |
 | HDMI | Saved names worked; an unplugged port could still report `connected: true` |
 | Live preview | Playing events observed, but visible video from a connected source still needs validation |
 | Audio behind overlay | Not yet validated during programme playback |
+
+The owner confirmed the redesigned private setup looks better on the original TV. The public reference retains generic configuration and has not been independently installed.
 
 The most important lessons are in **[TROUBLESHOOTING.md](docs/TROUBLESHOOTING.md)**. Overlay mode is experimental: do not equate one successful process-retention test with every app remaining resident.
 
@@ -79,6 +87,10 @@ sh scripts/build.sh
 `prepare-apps.py` contacts **your configured TV** to read launch points and icons. `build.sh` builds locally and does not install or remap Home. Review the installation procedure in [SETUP.md](docs/SETUP.md) before deploying the IPK.
 
 Use the app ID `org.local.weboshome` and data root `/var/lib/webos-home` consistently. If you change either, update the source, metadata, boot/photo paths, mappings and undo records together.
+
+The dock has four slots. `hiddenApps` supplies the initial/reset hidden list (for example `['youtube.leanback.kids.v4']`); hiding never uninstalls an app. Existing saved layouts take precedence. Hold OK on an app to change the layout; hold OK on Settings for wallpaper, slideshow preview and hidden-app recovery.
+
+`prepare-apps.py` creates local landscape cards from your TV's icons. For full-width logo artwork like the configured TV screenshots, put your own 338×191 or 368×208 banners under `private/generated/assets/banners/` and set `banners: {'APP_ID': 'assets/banners/FILENAME.png'}` in `config.local.js`. Both dock and grid use the same artwork, with no overlaid labels; the selected app name appears above the cards. Banners and copied app icons remain local and are not included in this repository.
 
 The app loads local preferences ahead of config defaults. Changing `idleMs` or weather defaults in the config does not overwrite an already-saved preference: back up and deliberately update the saved value on an existing installation.
 
@@ -118,7 +130,7 @@ Those decisions belong to the owner of each TV. The prompt and guide include the
 
 ## Validation
 
-Run `python3 -m unittest discover -s tests -v` for offline helper checks. They use a fake SSH executable and do not contact a TV. The generic launcher passes ES5 parsing and local IPK packaging. Its roots are a real-TV setup, but this sanitized package is not represented as separately device-tested. Follow the real-device verification checklist before integration.
+Run `python3 -m unittest discover -s tests -v` for offline helper checks. They use a fake SSH executable and do not contact a TV. The generic launcher passes ES5 parsing, offline remote/layout regression checks and local IPK packaging. Run `node tests/check-launcher.js` for the remote/layout checks. Its roots are a real-TV setup, but this sanitized package is not represented as separately device-tested. Follow the real-device verification checklist before integration.
 
 If your firmware is patched, you can still use LG settings for privacy, arrange stock app tiles and use local media. A Developer Mode app may be an option on an **unrooted** TV, subject to LG's limits. Root-only startup, key filters and private services are not available through this recipe without root.
 

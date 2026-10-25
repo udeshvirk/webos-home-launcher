@@ -24,3 +24,9 @@ The repository contains reviewed UI screenshots in [the gallery](screenshots/REA
 Use your own photos, or obtain appropriate permission and retain each asset's attribution/license locally. Do not assume Wikimedia Commons is one blanket license for all images.
 
 The supplied small launcher icon was created for this project. When enabling weather, retain the visible Open-Meteo attribution provided by the reference app and review the service's current terms and [CC BY 4.0 data attribution](https://open-meteo.com/en/terms).
+
+## Classic layout and local fonts
+
+The classic layout takes visual inspiration from [Sony BRAVIA Launcher](https://github.com/udeshvirk/sony-bravia-launcher) and [Lumen](https://github.com/samrenfrew/lumen-webos). Lumen is not installed or bundled. The reference remains a plain HTML/CSS/ES5 app.
+
+Outfit is bundled under the SIL Open Font License in [app/assets/fonts/Outfit-OFL.txt](../app/assets/fonts/Outfit-OFL.txt). The static TrueType instances were generated from the Sony launcher's OFL-licensed Outfit source with HarfBuzz `hb-subset --keep-everything --variations=wght=140` (and 300/400). They are named under the Outfit family; retain the included license when redistributing.
