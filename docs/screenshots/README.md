@@ -1,14 +1,12 @@
 # Screenshots from the original TV
 
-Real, unedited 1920×1080 captures from the original LG 55UM7300PTA setup. They show its configured title, weather location and saved input names; the public reference source uses generic defaults. These captures illustrate the UI improvements before the subsequent overlay trial, not a separately installed build of the generic reference app.
+Real, unedited 1920×1080 captures from the original LG 55UM7300PTA setup. The Home capture shows the current classic design, saved on 25 October 2026; the wallpaper-picker and Inputs captures are earlier examples. They show configured weather and saved input names, while the public reference uses generic defaults. These are captures of the private configured launcher, not a separately installed build of the generic reference app.
 
-## Earlier Home screen
+## Classic Home screen
 
-This capture predates the classic four-app redesign. The current source uses a spacious dock, icon pills and a separate All Apps view; it does not show the older stock-Home/slideshow pills.
+Greeting, clock/date, Inputs and Settings icon pills, and four landscape app banners. The clock, selected app title and first card share a left edge. Down reveals All Apps, which uses the same image-only card treatment. Up returns to this spacious view. The selected app name appears above the dock, with no labels over the artwork.
 
-In this earlier design, fixed favourites remain visible while the last app in All Apps is selected. Clock/date, optional weather, Inputs, Settings, stock Home and the immediate slideshow button are visible.
-
-![Home screen with fixed favourites and the lower app grid](home.png)
+![Classic Home with aligned text and the four-app dock](home.png)
 
 ## Wallpaper picker
 
@@ -24,6 +22,6 @@ Empty ports show explicit preview placeholders. Custom input labels are marked *
 
 ## Photo credits and exclusions
 
-Landscape photographs visible behind the UI and in the picker come from Wikimedia Commons. Authors, source links, licenses and presentation changes are listed in [ATTRIBUTION.txt](ATTRIBUTION.txt). The main background is **Basile Morin's photograph of rice fields in Vang Vieng, Laos**, under CC BY-SA 4.0. Photo content retains the stated source licenses; it is not relicensed under the repository's MIT code license.
+Landscape photographs visible behind the UI and in the picker come from Wikimedia Commons. Authors, source links, licenses and presentation changes are listed in [ATTRIBUTION.txt](ATTRIBUTION.txt). The current Home background is **Benjamin Smith’s photograph of Hadrian’s Wall on Housesteads Crags**, under CC BY-SA 4.0. The older picker and Inputs examples also show **Basile Morin’s photograph of rice fields in Vang Vieng, Laos**, under CC BY-SA 4.0. Photo content retains the stated source licenses; it is not relicensed under the repository's MIT code license.
 
 Family-photo slideshow captures and streaming account/profile screens are deliberately excluded. A slideshow screenshot is not required to use the local-photo feature described in the guide.
