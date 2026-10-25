@@ -4,7 +4,8 @@ are published here, not the standalone photo collection. Photo content retains
 its respective source license; the repository MIT license does not relicense
 these photographs or third-party app logos.
 Additional presentation changes: scaling/darkening behind UI and picker thumbnails.
-Screenshots are unedited TV captures. See source and license links below.
+Screenshots are real TV captures. The Home screenshot has a privacy blur over
+the weather city name. See source and license links below.
 
 01-Swiss-Alpine-Valley.jpg
 File:S-charl richting Alp Sesvenna. 21-09-2026. (d.j.b) 09.jpg

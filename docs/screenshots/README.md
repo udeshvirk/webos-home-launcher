@@ -1,6 +1,6 @@
 # Screenshots from the original TV
 
-Real, unedited 1920×1080 captures from the original LG 55UM7300PTA setup. The Home capture shows the current classic design, saved on 25 October 2026; the wallpaper-picker and Inputs captures are earlier examples. They show configured weather and saved input names, while the public reference uses generic defaults. These are captures of the private configured launcher, not a separately installed build of the generic reference app.
+Real 1920×1080 captures from the original LG 55UM7300PTA setup. The Home capture shows the current classic design, saved on 25 October 2026; the wallpaper-picker and Inputs captures are earlier examples. The city name in the Home weather line is blurred for privacy. The other captures have the weather location covered by their dialogs. Saved input names remain visible; the public reference uses generic defaults. These are captures of the private configured launcher, not a separately installed build of the generic reference app.
 
 ## Classic Home screen
 
